@@ -193,6 +193,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductManagerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -294,6 +295,10 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\ProductManager\Index.cshtml" />
+    <Content Include="Views\ProductManager\Create.cshtml" />
+    <Content Include="Views\ProductManager\Edit.cshtml" />
+    <Content Include="Views\ProductManager\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -308,6 +313,24 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ShoppingCart.Core\ShoppingCart.Core.csproj">
+      <Project>{7a08be35-9e2e-4b5c-892e-1ae7c9047b5a}</Project>
+      <Name>ShoppingCart.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShoppingCart.DataAccess.InMemory\ShoppingCart.DataAccess.InMemory.csproj">
+      <Project>{dc16f62f-a4dd-4960-ab3a-1f3c5feef02f}</Project>
+      <Name>ShoppingCart.DataAccess.InMemory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShoppingCart.DataAccess.SQL\ShoppingCart.DataAccess.SQL.csproj">
+      <Project>{ab70efc2-5d24-4dd8-ba95-f66e2f6786ea}</Project>
+      <Name>ShoppingCart.DataAccess.SQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShoppingCart.Services\ShoppingCart.Services.csproj">
+      <Project>{a81fc4b3-b7c4-46fd-babb-e7ce388d0f8e}</Project>
+      <Name>ShoppingCart.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
