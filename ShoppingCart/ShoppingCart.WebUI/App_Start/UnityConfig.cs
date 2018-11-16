@@ -11,7 +11,7 @@ namespace ShoppingCart.WebUI
     /// Specifies the Unity configuration for the main container.
     /// </summary>
     public static class UnityConfig
-    {;
+    {
         #region Unity Container
         private static Lazy<IUnityContainer> container =
           new Lazy<IUnityContainer>(() =>
